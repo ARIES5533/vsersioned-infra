@@ -25,7 +25,7 @@ variable "public_subnet_cidr" {
 variable "key_name" {
   description = "SSH key name in AWS"
   type        = string
-  default   = "aries"
+  default     = "aries"
 }
 
 variable "ec2_name" {
