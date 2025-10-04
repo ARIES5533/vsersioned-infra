@@ -32,11 +32,11 @@ resource "aws_subnet" "public" {
 
 # --- Route Table & Route ---
 resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.infra.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw.id
+    gateway_id = aws_internet_gateway.infra.id
   }
 
   tags = {
